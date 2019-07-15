@@ -10,13 +10,17 @@ public class Pedido {
 	@Id
 	@GeneratedValue
 	private Long id;
-
+	
+	@JsonProperty("codigo_cliente")
 	private Long codCliente;
-
+	
+	@JsonProperty("codigo_produtos")
 	private Long codProdutos;
 	
+	@JsonProperty("valor_total")
 	private Double valorTotal;
 	
+	@JsonProperty("endereco_entrega")
 	private String enderecoEntrega;
 
 	public Long getId() {
