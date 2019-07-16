@@ -17,4 +17,9 @@ public class PedidoBusiness {
 		return repository.save(pedido);
 
 	}
+	
+	public Iterable<Pedido> buscaTodos(){
+		
+		return repository.findAll();
+	}
 }
