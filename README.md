@@ -1,5 +1,5 @@
 # Sistema_Pedidos
-Teste Xbrain sistema de pedidos em Java, utilizando Spring Boot
+ Sistema de pedidos em Java, utilizando Spring Boot
 
 # Informações
 
