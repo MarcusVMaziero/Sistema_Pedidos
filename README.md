@@ -19,6 +19,8 @@ Para consumir a API utilizar a rota: http://localhost:8080/api/v1/pedido
                   
 # Próximos Passos
 
+* Implementar Clean Arch para melhorar o projeto
+* Seguir diretivas do Clean Code
 * Criar Table no BD chamada Entrega;
 * Implementar o RabbitMQ para criar um lista de pedidos com os dados:
 
