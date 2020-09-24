@@ -1,5 +1,6 @@
 package com.produtos.produtos.controller;
 
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -11,16 +12,16 @@ import com.produtos.produtos.business.PedidoBusiness;
 import com.produtos.produtos.models.Pedido;
 
 /**
- * Classe onde é tratada as rotas do sistema referente aos Pedidos
+ * Rotas do sistema referente aos Pedidos
  * 
  * @author Marcus Vinicius
  *
  */
 @RestController
 @RequestMapping("/api")
+@RequiredArgsConstructor
 public class PedidoController {
 
-	@Autowired
 	private PedidoBusiness business;
 	
 	@PostMapping("/v1/pedido")

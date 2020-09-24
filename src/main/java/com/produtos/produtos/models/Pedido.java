@@ -4,6 +4,9 @@ import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.RequiredArgsConstructor;
 
 /**
  * Classe do Objeto Pedido vinculado ao BD H2
@@ -13,6 +16,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  */
 
 @Entity
+@Data
 public class Pedido {
 	
 	@Id
@@ -34,47 +38,4 @@ public class Pedido {
 	@NotNull
 	@JsonProperty("endereco_entrega")
 	private String enderecoEntrega;
-
-	public Long getId() {
-		return id;
-	}
-
-	public void setId(Long id) {
-		this.id = id;
-	}
-
-	public Long getCodCliente() {
-		return codCliente;
-	}
-
-	public void setCodCliente(Long codCliente) {
-		this.codCliente = codCliente;
-	}
-
-	public Long getCodProdutos() {
-		return codProdutos;
-	}
-
-	public void setCodProdutos(Long codProdutos) {
-		this.codProdutos = codProdutos;
-	}
-
-	public Double getValorTotal() {
-		return valorTotal;
-	}
-
-	public void setValorTotal(Double valorTotal) {
-		this.valorTotal = valorTotal;
-	}
-
-	public String getEnderecoEntrega() {
-		return enderecoEntrega;
-	}
-
-	public void setEnderecoEntrega(String enderecoEntrega) {
-		this.enderecoEntrega = enderecoEntrega;
-	}
-	
-	
-
 }
