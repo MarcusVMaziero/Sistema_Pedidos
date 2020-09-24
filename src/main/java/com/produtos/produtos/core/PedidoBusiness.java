@@ -1,11 +1,10 @@
-package com.produtos.produtos.business;
+package com.produtos.produtos.core;
 
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import com.produtos.produtos.models.Pedido;
-import com.produtos.produtos.repository.PedidoRepository;
+import com.produtos.produtos.dataprovider.models.Pedido;
+import com.produtos.produtos.dataprovider.repository.PedidoRepository;
 
 @Component
 @RequiredArgsConstructor

@@ -1,12 +1,10 @@
-package com.produtos.produtos.models;
+package com.produtos.produtos.dataprovider.models;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.RequiredArgsConstructor;
 
 /**
  * Classe do Objeto Pedido vinculado ao BD H2
