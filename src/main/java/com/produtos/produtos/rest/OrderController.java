@@ -1,5 +1,7 @@
 package com.produtos.produtos.rest;
 
+import com.produtos.produtos.dataprovider.models.OrderData;
+import com.produtos.produtos.rest.model.OrderHttp;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -7,8 +9,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.produtos.produtos.core.PedidoBusiness;
-import com.produtos.produtos.dataprovider.models.Pedido;
+import com.produtos.produtos.core.OrderUseCase;
+
+import javax.validation.Valid;
 
 /**
  * Rotas do sistema referente aos Pedidos
@@ -19,18 +22,18 @@ import com.produtos.produtos.dataprovider.models.Pedido;
 @RestController
 @RequestMapping("/api")
 @RequiredArgsConstructor
-public class PedidoController {
+public class OrderController {
 
-	private PedidoBusiness business;
+	private OrderUseCase business;
 	
 	@PostMapping("/v1/pedido")
-	public Object criarPedido(@RequestBody Pedido pedido) {
-		return this.business.persiste(pedido);
+	public Object createOrder(@RequestBody @Valid OrderHttp pedido) {
+		return this.business.create(pedido.toOrder());
 	}
 	
 	@GetMapping("/v1/pedido")
-	public Iterable<Pedido> buscarPedidos() {
-		return this.business.buscaTodos();
+	public Iterable<OrderData> findOrders() {
+		return this.business.findOrders();
 	}
 
 }

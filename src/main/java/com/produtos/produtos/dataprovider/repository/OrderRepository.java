@@ -1,7 +1,7 @@
 package com.produtos.produtos.dataprovider.repository;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.produtos.produtos.dataprovider.models.Pedido;
+import com.produtos.produtos.dataprovider.models.OrderData;
 
 /**
  * Interface do repositório que herda os dados da JPA para tratativa do BD H2
@@ -9,6 +9,6 @@ import com.produtos.produtos.dataprovider.models.Pedido;
  * @author Marcus Vinicius
  *
  */
-public interface PedidoRepository extends JpaRepository<Pedido, Long> {
+public interface OrderRepository extends JpaRepository<OrderData, Long> {
 
 }

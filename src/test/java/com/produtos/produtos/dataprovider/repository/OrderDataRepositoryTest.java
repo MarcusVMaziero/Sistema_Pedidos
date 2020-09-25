@@ -7,7 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import com.produtos.produtos.dataprovider.models.Pedido;
+import com.produtos.produtos.dataprovider.models.OrderData;
 
 /**
  * Classe de teste para validar se esta persistindo na base de Dados
@@ -17,26 +17,26 @@ import com.produtos.produtos.dataprovider.models.Pedido;
  */
 @RunWith(SpringRunner.class)
 @DataJpaTest
-public class PedidoRepositoryTest {
+public class OrderDataRepositoryTest {
 
 	@Autowired
-	private PedidoRepository repository;
+	private OrderRepository repository;
 
 	@Test
 	public void persistePedido() {
-		Pedido pedido = mockPedido();
+		OrderData orderData = mockPedido();
 
-		repository.save(pedido);
+		repository.save(orderData);
 
-		Assertions.assertThat(pedido.getId()).isNotNull();
-		Assertions.assertThat(pedido.getCodCliente()).isEqualTo(1L);
-		Assertions.assertThat(pedido.getCodProdutos()).isEqualTo(1L);
-		Assertions.assertThat(pedido.getEnderecoEntrega()).isEqualTo("teste");
-		Assertions.assertThat(pedido.getValorTotal()).isEqualTo(100D);
+		Assertions.assertThat(orderData.getId()).isNotNull();
+		Assertions.assertThat(orderData.getCodCliente()).isEqualTo(1L);
+		Assertions.assertThat(orderData.getCodProdutos()).isEqualTo(1L);
+		Assertions.assertThat(orderData.getEnderecoEntrega()).isEqualTo("teste");
+		Assertions.assertThat(orderData.getValorTotal()).isEqualTo(100D);
 	}
 
-	private Pedido mockPedido() {
-		Pedido p = new Pedido();
+	private OrderData mockPedido() {
+		OrderData p = new OrderData();
 
 		p.setCodCliente(1L);
 		p.setCodProdutos(1L);

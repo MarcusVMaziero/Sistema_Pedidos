@@ -4,7 +4,9 @@ import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 /**
  * Classe do Objeto Pedido vinculado ao BD H2
@@ -15,25 +17,15 @@ import lombok.Data;
 
 @Entity
 @Data
-public class Pedido {
+@Builder
+@NoArgsConstructor
+public class OrderData {
 	
 	@Id
 	@GeneratedValue
 	private Long id;
-	
-	@NotNull
-	@JsonProperty("codigo_cliente")
 	private Long codCliente;
-	
-	@NotNull
-	@JsonProperty("codigo_produtos")
 	private Long codProdutos;
-	
-	@NotNull
-	@JsonProperty("valor_total")
 	private Double valorTotal;
-	
-	@NotNull
-	@JsonProperty("endereco_entrega")
 	private String enderecoEntrega;
 }

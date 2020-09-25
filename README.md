@@ -3,7 +3,7 @@
 
 # Informações
 
-Para consumir a API utilizar a rota: http://localhost:8080/api/v1/pedido
+Para consumir a API utilizar a rota: http://localhost:8080/api/v1/orderData
 * É necessário enviar o método que desejar chamar;
   * Para criar novo Pedido enviar request com o método: POST
   * Para retornar lista de Pedidos enviar request com o método: GET
