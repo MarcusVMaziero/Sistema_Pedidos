@@ -1,7 +1,7 @@
-package com.produtos.produtos.rest.model;
+package com.pedidos.pedidos.rest.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.produtos.produtos.core.Order;
+import com.pedidos.pedidos.core.Order;
 import lombok.Data;
 
 import javax.validation.constraints.NotNull;

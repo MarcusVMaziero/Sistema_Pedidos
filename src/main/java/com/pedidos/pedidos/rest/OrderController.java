@@ -1,15 +1,14 @@
-package com.produtos.produtos.rest;
+package com.pedidos.pedidos.rest;
 
-import com.produtos.produtos.dataprovider.models.OrderData;
-import com.produtos.produtos.rest.model.OrderHttp;
+import com.pedidos.pedidos.core.OrderUseCase;
+import com.pedidos.pedidos.dataprovider.models.OrderData;
+import com.pedidos.pedidos.rest.model.OrderHttp;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
-import com.produtos.produtos.core.OrderUseCase;
 
 import javax.validation.Valid;
 

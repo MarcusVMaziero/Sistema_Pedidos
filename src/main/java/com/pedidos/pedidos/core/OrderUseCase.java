@@ -1,10 +1,9 @@
-package com.produtos.produtos.core;
+package com.pedidos.pedidos.core;
 
-import com.produtos.produtos.dataprovider.models.OrderData;
+import com.pedidos.pedidos.dataprovider.models.OrderData;
+import com.pedidos.pedidos.dataprovider.repository.OrderRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
-
-import com.produtos.produtos.dataprovider.repository.OrderRepository;
 
 @Component
 @RequiredArgsConstructor

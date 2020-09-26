@@ -1,9 +1,10 @@
-package com.produtos.produtos.dataprovider.models;
+package com.pedidos.pedidos.dataprovider.models;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -19,6 +20,7 @@ import lombok.NoArgsConstructor;
 @Data
 @Builder
 @NoArgsConstructor
+@AllArgsConstructor
 public class OrderData {
 	
 	@Id

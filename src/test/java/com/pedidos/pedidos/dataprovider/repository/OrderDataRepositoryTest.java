@@ -1,13 +1,12 @@
-package com.produtos.produtos.dataprovider.repository;
+package com.pedidos.pedidos.dataprovider.repository;
 
+import com.pedidos.pedidos.dataprovider.models.OrderData;
 import org.assertj.core.api.Assertions;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.test.context.junit4.SpringRunner;
-
-import com.produtos.produtos.dataprovider.models.OrderData;
 
 /**
  * Classe de teste para validar se esta persistindo na base de Dados

@@ -1,12 +1,14 @@
-package com.produtos.produtos.core;
+package com.pedidos.pedidos.core;
 
-import com.produtos.produtos.dataprovider.models.OrderData;
+import com.pedidos.pedidos.dataprovider.models.OrderData;
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
 @NoArgsConstructor
+@AllArgsConstructor
 @Builder
 public class Order {
 
