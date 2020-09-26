@@ -1,9 +1,8 @@
-package com.pedidos.pedidos.dataprovider.models;
+package com.pedidos.pedidos.dataprovider.pedidos.models;
 
 import javax.persistence.*;
-import javax.validation.constraints.NotNull;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
+import com.pedidos.pedidos.core.Order;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -30,4 +29,14 @@ public class OrderData {
 	private Long codProdutos;
 	private Double valorTotal;
 	private String enderecoEntrega;
+
+	public Order toDomain() {
+		return Order.builder()
+				.codCliente(codCliente)
+				.codProdutos(codProdutos)
+				.enderecoEntrega(enderecoEntrega)
+				.valorTotal(valorTotal)
+				.idOrder(id)
+				.build();
+	}
 }
