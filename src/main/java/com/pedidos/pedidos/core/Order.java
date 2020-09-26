@@ -7,6 +7,8 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.List;
+
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -14,27 +16,27 @@ import lombok.NoArgsConstructor;
 public class Order {
 
     private Long idOrder;
-    private Long codCliente;
-    private Long codProdutos;
-    private Double valorTotal;
-    private String enderecoEntrega;
+    private Long codeCustomer;
+    private List<Long> codeProducts;
+    private Double totalAmount;
+    private String deliveryAddress;
 
     public OrderData toOrderData() {
         return OrderData.builder()
-                .codCliente(codCliente)
-                .codProdutos(codProdutos)
-                .enderecoEntrega(enderecoEntrega)
-                .valorTotal(valorTotal)
+                .codeCustomer(codeCustomer)
+                .codeProducts(codeProducts)
+                .deliveryAddress(deliveryAddress)
+                .totalAmount(totalAmount)
                 .build();
     }
 
     public OrderHttp toOrderHttp() {
         return OrderHttp.builder()
                 .idOrder(idOrder)
-                .codCliente(codCliente)
-                .codProdutos(codProdutos)
-                .enderecoEntrega(enderecoEntrega)
-                .valorTotal(valorTotal)
+                .codeCustomer(codeCustomer)
+                .codeProducts(codeProducts)
+                .deliveryAddress(deliveryAddress)
+                .totalAmount(totalAmount)
                 .build();
     }
 }

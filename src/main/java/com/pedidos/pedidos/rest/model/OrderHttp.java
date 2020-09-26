@@ -8,6 +8,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.validation.constraints.NotNull;
+import java.util.List;
 
 @Data
 @Builder
@@ -15,30 +16,32 @@ import javax.validation.constraints.NotNull;
 @NoArgsConstructor
 public class OrderHttp {
 
+    @JsonProperty("id_pedido")
     private Long idOrder;
 
     @NotNull
     @JsonProperty("codigo_cliente")
-    private Long codCliente;
+    private Long codeCustomer;
 
     @NotNull
     @JsonProperty("codigo_produtos")
-    private Long codProdutos;
+    private List<Long> codeProducts;
 
     @NotNull
     @JsonProperty("valor_total")
-    private Double valorTotal;
+    private Double totalAmount;
 
     @NotNull
     @JsonProperty("endereco_entrega")
-    private String enderecoEntrega;
+    private String deliveryAddress;
 
     public Order toOrder() {
         return Order.builder()
-                .codCliente(this.codCliente)
-                .codProdutos(this.codProdutos)
-                .enderecoEntrega(this.enderecoEntrega)
-                .valorTotal(this.valorTotal)
+                .idOrder(idOrder)
+                .codeCustomer(codeCustomer)
+                .codeProducts(codeProducts)
+                .deliveryAddress(deliveryAddress)
+                .totalAmount(totalAmount)
                 .build();
     }
 }

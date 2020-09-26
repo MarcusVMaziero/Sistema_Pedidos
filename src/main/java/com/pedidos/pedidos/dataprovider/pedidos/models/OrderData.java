@@ -8,6 +8,9 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Classe do Objeto Pedido vinculado ao BD H2
  * 
@@ -25,17 +28,18 @@ public class OrderData {
 	@Id
 	@GeneratedValue
 	private Long id;
-	private Long codCliente;
-	private Long codProdutos;
-	private Double valorTotal;
-	private String enderecoEntrega;
+	private Long codeCustomer;
+	@ElementCollection(targetClass=Long.class)
+	private List<Long> codeProducts;
+	private Double totalAmount;
+	private String deliveryAddress;
 
 	public Order toDomain() {
 		return Order.builder()
-				.codCliente(codCliente)
-				.codProdutos(codProdutos)
-				.enderecoEntrega(enderecoEntrega)
-				.valorTotal(valorTotal)
+				.codeCustomer(codeCustomer)
+				.codeProducts(codeProducts)
+				.deliveryAddress(deliveryAddress)
+				.totalAmount(totalAmount)
 				.idOrder(id)
 				.build();
 	}
