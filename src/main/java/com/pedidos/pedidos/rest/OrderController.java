@@ -26,7 +26,7 @@ import java.util.stream.Collectors;
 @RequiredArgsConstructor
 public class OrderController {
 
-	private OrderUseCase business;
+	private final OrderUseCase business;
 	
 	@PostMapping("/v1/pedido")
 	public OrderHttp createOrder(@RequestBody @Valid OrderHttp pedido) {

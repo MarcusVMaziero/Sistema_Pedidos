@@ -13,7 +13,7 @@ import java.util.stream.Collectors;
 @Component
 @RequiredArgsConstructor
 public class OrderDataProvider implements OrderGateway {
-    private OrderRepository repository;
+    private final OrderRepository repository;
 
     @Override
     public Order create(Order order) {

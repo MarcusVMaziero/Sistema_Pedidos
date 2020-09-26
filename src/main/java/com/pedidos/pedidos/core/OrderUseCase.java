@@ -6,11 +6,12 @@ import org.springframework.stereotype.Component;
 
 import java.util.List;
 
-@Component
+
 @RequiredArgsConstructor
+@Component
 public class OrderUseCase {
 
-	private OrderGateway orderGateway;
+	private final OrderGateway orderGateway;
 
 	public Order create(Order order) {
 		return orderGateway.create(order);
