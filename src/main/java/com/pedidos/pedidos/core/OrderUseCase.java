@@ -1,21 +1,22 @@
 package com.pedidos.pedidos.core;
 
-import com.pedidos.pedidos.dataprovider.models.OrderData;
-import com.pedidos.pedidos.dataprovider.repository.OrderRepository;
+import com.pedidos.pedidos.dataprovider.pedidos.gateway.OrderGateway;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
+
+import java.util.List;
 
 @Component
 @RequiredArgsConstructor
 public class OrderUseCase {
 
-	private OrderRepository repository;
+	private OrderGateway orderGateway;
 
-	public Object create(Order order) {
-		return repository.save(order.toOrderData());
+	public Order create(Order order) {
+		return orderGateway.create(order);
 	}
 	
-	public Iterable<OrderData> findOrders(){
-		return repository.findAll();
+	public List<Order> findOrders(){
+		return orderGateway.findOrders();
 	}
 }

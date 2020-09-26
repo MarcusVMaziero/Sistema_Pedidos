@@ -1,7 +1,7 @@
-package com.pedidos.pedidos.dataprovider.repository;
+package com.pedidos.pedidos.dataprovider.pedidos.repository;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.pedidos.pedidos.dataprovider.models.OrderData;
+import com.pedidos.pedidos.dataprovider.pedidos.models.OrderData;
 
 /**
  * Interface do repositório que herda os dados da JPA para tratativa do BD H2
