@@ -1,30 +1,33 @@
 # Sistema_Pedidos
- Sistema de pedidos em Java, utilizando Spring Boot
+ Sistema de pedidos em Java, utilizando Spring Boot, RabbitMq e H2
+ 
+ Para saber mais sobre as tecnologias
+ 
+ Java: https://docs.oracle.com/javase/8/docs/api/
+ 
+ Spring-Boot: https://spring.io/projects/spring-boot
+ 
+ RabbitMq: https://www.rabbitmq.com/
+ 
+ H2: https://www.h2database.com/html/main.html
 
-# Informações
+# Documentação
+ A documentação do Projeto esta disponivel pelo swagger
+ 
+ Para acessar basta rodar o projeto e acessar via navegador o link: http://localhost:8080/swagger-ui.html
 
-Para consumir a API utilizar a rota: http://localhost:8080/api/v1/orderData
-* É necessário enviar o método que desejar chamar;
-  * Para criar novo Pedido enviar request com o método: POST
-  * Para retornar lista de Pedidos enviar request com o método: GET
-  
-* O modelo de Json para envio deve respeitar o contrato REST descrito:
-
-                * {
-                    "codigo_cliente": Long,
-                    "codigo_produtos": Long,
-                    "valor_total": Double,
-                    "endereco_entrega": "String"
-                  }
-                  
 # Próximos Passos
 
-* Implementar Clean Arch para melhorar o projeto
-* Seguir diretivas do Clean Code
-* Criar Table no BD chamada Entrega;
-* Implementar o RabbitMQ para criar um lista de pedidos com os dados:
-
-  - Endereço
-  - IdPedido
-	
-Para posteriormente persistir esses dados em uma outra Table do BD denominada Entrega;
+ -Quebrar os projeto em 3 com Pedido, Entrega e Cliente e efetivar a comunicação entre eles com o RabbitMq
+ 
+ -Cliente service deve ser responsavel pelos dados do cliente e sua conta
+ 
+ -Entrega service deve realizar o processo de permitir a consulta de entregas e seu gerenciamento
+ 
+ -Pedido service deve criar novos endpoint´s para consulta e gerenciamento
+ 
+ -Externizar configurações do RabbitMq
+ 
+ -Criar projeto com "libs" dados gerais que podem ser usados por todos os services .jar
+ 
+ -Criar frontEnd
