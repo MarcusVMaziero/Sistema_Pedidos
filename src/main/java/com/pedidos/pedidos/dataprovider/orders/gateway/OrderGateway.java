@@ -1,4 +1,4 @@
-package com.pedidos.pedidos.dataprovider.pedidos.gateway;
+package com.pedidos.pedidos.dataprovider.orders.gateway;
 
 import com.pedidos.pedidos.core.Order;
 

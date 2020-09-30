@@ -1,11 +1,11 @@
-package com.pedidos.pedidos.dataprovider.pedidos;
+package com.pedidos.pedidos.dataprovider.orders;
 
 import com.pedidos.pedidos.core.Order;
-import com.pedidos.pedidos.dataprovider.entregaqueue.gateway.DeliveryQueueGateway;
-import com.pedidos.pedidos.dataprovider.entregaqueue.models.DeliveryQueue;
-import com.pedidos.pedidos.dataprovider.pedidos.gateway.OrderGateway;
-import com.pedidos.pedidos.dataprovider.pedidos.models.OrderData;
-import com.pedidos.pedidos.dataprovider.pedidos.repository.OrderRepository;
+import com.pedidos.pedidos.dataprovider.deliveryqueue.gateway.DeliveryQueueGateway;
+import com.pedidos.pedidos.dataprovider.deliveryqueue.models.DeliveryQueue;
+import com.pedidos.pedidos.dataprovider.orders.gateway.OrderGateway;
+import com.pedidos.pedidos.dataprovider.orders.models.OrderData;
+import com.pedidos.pedidos.dataprovider.orders.repository.OrderRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

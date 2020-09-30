@@ -1,6 +1,6 @@
 package com.pedidos.pedidos.core;
 
-import com.pedidos.pedidos.dataprovider.pedidos.gateway.OrderGateway;
+import com.pedidos.pedidos.dataprovider.orders.gateway.OrderGateway;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 

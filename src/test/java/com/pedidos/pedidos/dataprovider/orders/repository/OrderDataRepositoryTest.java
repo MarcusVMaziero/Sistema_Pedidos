@@ -1,6 +1,6 @@
-package com.pedidos.pedidos.dataprovider.pedidos.repository;
+package com.pedidos.pedidos.dataprovider.orders.repository;
 
-import com.pedidos.pedidos.dataprovider.pedidos.models.OrderData;
+import com.pedidos.pedidos.dataprovider.orders.models.OrderData;
 import org.assertj.core.api.Assertions;
 import org.junit.Test;
 import org.junit.runner.RunWith;

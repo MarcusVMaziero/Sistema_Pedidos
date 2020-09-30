@@ -1,4 +1,4 @@
-package com.pedidos.pedidos.dataprovider.entregaqueue.models;
+package com.pedidos.pedidos.dataprovider.deliveryqueue.models;
 
 import lombok.Builder;
 import lombok.Data;

@@ -1,7 +1,7 @@
-package com.pedidos.pedidos.dataprovider.entregaqueue;
+package com.pedidos.pedidos.dataprovider.deliveryqueue;
 
-import com.pedidos.pedidos.dataprovider.entregaqueue.gateway.DeliveryQueueGateway;
-import com.pedidos.pedidos.dataprovider.entregaqueue.models.DeliveryQueue;
+import com.pedidos.pedidos.dataprovider.deliveryqueue.gateway.DeliveryQueueGateway;
+import com.pedidos.pedidos.dataprovider.deliveryqueue.models.DeliveryQueue;
 import lombok.RequiredArgsConstructor;
 import org.springframework.amqp.core.Queue;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;

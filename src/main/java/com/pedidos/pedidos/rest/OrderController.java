@@ -2,7 +2,6 @@ package com.pedidos.pedidos.rest;
 
 import com.pedidos.pedidos.core.Order;
 import com.pedidos.pedidos.core.OrderUseCase;
-import com.pedidos.pedidos.dataprovider.pedidos.models.OrderData;
 import com.pedidos.pedidos.rest.model.OrderHttp;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;

@@ -1,4 +1,4 @@
-package com.pedidos.pedidos.dataprovider.pedidos.models;
+package com.pedidos.pedidos.dataprovider.orders.models;
 
 import javax.persistence.*;
 
@@ -8,7 +8,6 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.ArrayList;
 import java.util.List;
 
 /**

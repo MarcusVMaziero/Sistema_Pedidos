@@ -1,6 +1,6 @@
 package com.pedidos.pedidos.core;
 
-import com.pedidos.pedidos.dataprovider.pedidos.models.OrderData;
+import com.pedidos.pedidos.dataprovider.orders.models.OrderData;
 import com.pedidos.pedidos.rest.model.OrderHttp;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
