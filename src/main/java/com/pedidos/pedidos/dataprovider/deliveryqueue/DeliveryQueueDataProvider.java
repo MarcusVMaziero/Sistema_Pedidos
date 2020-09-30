@@ -7,20 +7,20 @@ import org.springframework.amqp.core.Queue;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.stereotype.Service;
 
+/**
+ * DataProvider responsavel por enviar os dados de entrega para o rabbitmq - foi criado separado para tornar genérico no futuro
+ *
+ * @author Marcus Vinícius
+ */
 @Service
 @RequiredArgsConstructor
 public class DeliveryQueueDataProvider implements DeliveryQueueGateway {
-
-    private static final String HEADER_PROPERTY_ID = "id";
 
     private final RabbitTemplate rabbitTemplate;
     private final Queue queue;
 
     @Override
     public void send(DeliveryQueue deliveryQueue) {
-        rabbitTemplate.convertAndSend(this.queue.getName(), deliveryQueue, messagePostProcessor -> {
-            messagePostProcessor.getMessageProperties().setHeader(HEADER_PROPERTY_ID, deliveryQueue.getId());
-            return messagePostProcessor;
-        });
+        rabbitTemplate.convertAndSend(this.queue.getName(), deliveryQueue);
     }
 }

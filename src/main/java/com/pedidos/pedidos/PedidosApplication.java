@@ -10,7 +10,7 @@ import org.springframework.context.annotation.Bean;
 @SpringBootApplication
 public class PedidosApplication {
 
-	@Value("${queue.order.name}")
+	@Value("${queue.delivery.name}")
 	private String orderQueue;
 
 	public static void main(String[] args) {
